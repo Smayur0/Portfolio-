@@ -1,12 +1,11 @@
-import { Button } from "@/components/ui/button";
+import React from "react";
 
-export default function Home() {
+const page = () => {
   return (
-    <div className="">
-      <div className=" flex flex-col h-screen mx-auto bg-neutral-400 max-w-4xl">
-        hello
-        <Button variant={"secondary"}>Click me</Button>
-      </div>
+    <div className="h-screen w-screen">
+      Hello HelloHelloHelloHelloHelloHello Hello Hello Hello Hello Hello Hello
     </div>
   );
-}
+};
+
+export default page;
