@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import ModeToggle from "../providers/theme-toggle";
+import Image from "next/image";
 type OPTIONS = {
   label: string;
   value: string;
@@ -13,23 +14,28 @@ const options: OPTIONS[] = [
 ];
 const Header = () => {
   return (
-    <div className="sticky top-0 mx-auto flex max-w-3xl items-center justify-between overflow-hidden bg-transparent px-2 py-6 backdrop-blur-xs">
+    <div className="sticky top-0 flex items-center justify-between overflow-hidden bg-transparent px-2 py-6 backdrop-blur-xs">
       {/* image  */}
 
-      <div className="rounded-xl bg-black">
+      <div className="rounded-xl">
         <img
-          src="/MAYUR_photo.jpg"
+          src="/MS-B.png"
           alt="Logo"
-          className="object-fit h-15 w-20 rounded-md object-top"
+          className="transition-ease-in-out h-12 w-12 rounded-md object-top duration-300 hover:scale-105 dark:hidden"
+        />
+        <img
+          src="/MS-w.png"
+          alt="Logo"
+          className="transition-ease-in-out hidden h-12 w-12 rounded-md object-top duration-300 hover:scale-105 dark:block"
         />
       </div>
       {/* nav  */}
-      <div className="flex ">
+      <div className="flex">
         {options.map((option) => (
           <Link
             key={option.value}
             href={`/#${option.value}`}
-            className="mr-4 text-lg font-medium text-gray-700 hover:text-gray-900"
+            className="text-foreground hover:text-foreground mr-4 text-lg font-medium"
           >
             {option.label}
           </Link>

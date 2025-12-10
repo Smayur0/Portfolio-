@@ -1,10 +1,11 @@
 import React from "react";
+import Hero from "./components/hero-section";
 
 const page = () => {
   return (
-    <div className="h-screen w-screen">
-      Hello HelloHelloHelloHelloHelloHello Hello Hello Hello Hello Hello Hello
-    </div>
+    <>
+      <Hero />
+    </>
   );
 };
 

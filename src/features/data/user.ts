@@ -3,6 +3,7 @@ import { User } from "../types/user";
 export const user: User = {
   firstName: "Mayur",
   lastName: "Shelke",
+  userName: "Mayur Shelke",
   gender: "male",
   pronouns: "he/him",
   bio: "Transforming ideas into interactive realities",
@@ -28,29 +29,15 @@ export const user: User = {
   ],
   about: `
 - **Full Stack Web Developer** with **2+ years of experience**.
-- Skilled in **Next.js**, **React**, **TypeScript**,  and modern front-end technologies; building high-quality, user-centric web and mobile applications.
-- Passionate about exploring new technologies and turning ideas into reality, thoughtfully crafted personal projects.
-- 
-I’ve worked across both frontend (React) and backend (Node.js, Express), built and integrated REST APIs, and have hands-on experience with MongoDB and MySQL.
-I've also worked with AWS services for deploying and managing applications.
-
-I enjoy building clean, scalable solutions and continuously learning new technologies.`,
+- Skilled in **Next.js**, **React**, **TypeScript**, and modern front-end technologies; building high-quality, user-centric web and mobile applications.
+- I’ve worked across both frontend (React) and backend (Node.js, Express), built and integrated REST APIs, and have hands-on experience with MongoDB and MySQL.
+- I've also worked with AWS services for deploying and managing applications.
+- I enjoy building clean, scalable solutions and continuously learning new technologies.`,
   avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
   ogImage:
     "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1764345394",
-  //   namePronunciationUrl: "/audio/chanhdai.mp3",
-  //   timeZone: "Asia/Ho_Chi_Minh",
-  //   keywords: [
-  //     "ncdai",
-  //     "nguyenchanhdai",
-  //     "nguyen chanh dai",
-  //     "chanhdai",
-  //     "chanh dai",
-  //     "iamncdai",
-  //     "quaric",
-  //     "zadark",
-  //     "nguyễn chánh đại",
-  //     "chánh đại",
-  //   ],
-  dateCreated: "2023-10-20", // YYYY-MM-DD
+  namePronunciationUrl: "",
+  keywords: [],
+  timeZone: "",
+  dateCreated: "",
 };
