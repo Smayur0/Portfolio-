@@ -18,6 +18,7 @@ const Header = () => {
       {/* image  */}
 
       <div className="rounded-xl">
+
         <img
           src="/MS-B.png"
           alt="Logo"

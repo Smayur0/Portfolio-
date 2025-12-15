@@ -5,84 +5,129 @@ import { useEffect } from "react";
 import {
   BriefcaseBusinessIcon,
   CodeXmlIcon,
+  Github,
   Globe,
   LightbulbIcon,
+  Linkedin,
   Mail,
   MapPin,
+  Twitter,
 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
+import TechIcon from "./tech-icon";
+import { div } from "motion/react-client";
+import { SocialIcon } from "./social-icons";
 
 const Hero = () => {
-  const sentense = user.flipSentences;
-
-  function flipWords(sentense: string[]) {
-    console.log("SENTENSE", sentense);
+  function linkOpener(sentense: string) {
+    window.open(sentense, "_blank", "noopener,noreferrer");
   }
-  useEffect(() => {
-    flipWords(sentense);
-  }, []);
+
+  const openLink = (url: string) => window.open(url, "_blank");
+
   return (
-    <div className="mt-10">
-      {/* logo heading section  */}
+    <div className="mt-3">
       <div className="flex items-center space-x-20">
         {/* img section */}
         <img
           src="/IMG-4.PNg"
           alt="Logo"
-          className="border-border h-45 w-45 rounded-full border object-cover"
+          className="border-border h-25 w-25 rounded-full border"
         />
-        {/* name  */}
-        <div>
-          <h1 className="text-foreground mt-6 text-3xl font-bold">
-            {user.userName}
-          </h1>
-          <div className="border-edge mt-2 h-12.5 border-t py-1 pl-4 sm:h-9">
-            <FlipSentences
-              className="text-muted-foreground font-mono text-sm text-balance"
-              variants={{
-                initial: { y: -10, opacity: 0 },
-                animate: { y: -1, opacity: 1 },
-                exit: { y: 10, opacity: 0 },
-              }}
-            >
-              {user.flipSentences}
-            </FlipSentences>
-          </div>
-        </div>
       </div>
+
+      {/* Intro  */}
+      <div className="mt-4">
+        <h1 className="text-foreground text-3xl leading-loose font-bold tracking-wide">
+          {/*  */}
+          Hi , I'm {user.firstName} —-{" "}
+          <span className="text-muted-foreground ml-1">
+            A Full Stack web developer.
+          </span>
+        </h1>
+
+        {/* bio intro  */}
+
+        <h3 className="text-muted-foreground font-small mt-1 flex-wrap text-xl leading-loose tracking-wide text-wrap">
+          I build interactive web/mobile apps using
+          {"  "}
+          <TechIcon img="/TS.png" tech="Typescript" /> ,{"  "}
+          <TechIcon img="/REACT.png" tech="React.js" /> ,{"  "}
+          <TechIcon img="/Node.png" tech="Node.js" /> ,{"  "}
+          <TechIcon img="/Next.png" tech="Next.js" />
+          {"  "} and {"  "}
+          <TechIcon img="/MySQL.png" tech="MySQL" /> .
+        </h3>
+      </div>
+
+      <Separator className="my-3" />
       {/* text section */}
-      <Separator className="my-4" />
+
       <div className="grid grid-cols-1 gap-4 space-y-1 sm:grid-cols-2">
         {/* -------tech stack------- */}
         <div className="flex items-center space-x-3">
-          <div className="border-muted-foreground/15 bg-muted ring-edge ring-offset-background text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-8 items-center justify-center rounded-lg border p-1 transition-colors">
+          <div className="border-muted-foreground/15 bg-muted ring-edge ring-offset-background text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-8 cursor-pointer items-center justify-center rounded-lg border p-1 transition-colors">
             <CodeXmlIcon size={"2em"} className="text-muted-foreground" />
           </div>
-          <span>Full stack developer</span>
+          <span className="cursor-pointer">
+            Software Developer at{" "}
+            <span className="font-semibold">iConnect solutions</span>
+          </span>
         </div>
-        {/* -------tech stack------- */}
+        {/* -------Location------- */}
         <div className="flex items-center space-x-3">
-          <div className="border-muted-foreground/15 bg-muted ring-edge ring-offset-background text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-8 items-center justify-center rounded-lg border p-1 transition-colors">
+          <div
+            onClick={() => linkOpener("https://maps.google.com/?q=Pune, India")}
+            className="border-muted-foreground/15 bg-muted ring-edge ring-offset-background text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-8 cursor-pointer items-center justify-center rounded-lg border p-1 transition-colors"
+          >
             <MapPin size={"2em"} className="text-muted-foreground" />
           </div>
-          <span>Pune, India</span>
+          <span className="cursor-pointer">Pune, India</span>
         </div>
-        {/* -------tech stack------- */}
+        {/* -------Portfolio site------- */}
         <div className="flex items-center space-x-3">
-          <div className="border-muted-foreground/15 bg-muted ring-edge ring-offset-background text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-8 items-center justify-center rounded-lg border p-1 transition-colors">
+          <div
+            onClick={() => linkOpener("https://mayurshelke.dev")}
+            className="border-muted-foreground/15 bg-muted ring-edge ring-offset-background text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-8 cursor-pointer items-center justify-center rounded-lg border p-1 transition-colors"
+          >
             <Globe size={"2em"} className="text-muted-foreground" />
           </div>
-          <span>mayurshelke.dev</span>
+          <span className="cursor-pointer">mayurshelke.dev</span>
         </div>
-        {/* -------tech stack------- */}
+        {/* -------mail------- */}
         <div className="flex items-center space-x-3">
-          <div className="border-muted-foreground/15 bg-muted ring-edge ring-offset-background text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-8 items-center justify-center rounded-lg border p-1 transition-colors">
+          <div
+            onClick={() => linkOpener("mailto:mayurshelke.dev@gmail.com")}
+            className="border-muted-foreground/15 bg-muted ring-edge ring-offset-background text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-8 cursor-pointer items-center justify-center rounded-lg border p-1 transition-colors"
+          >
             <Mail size={"2em"} className="text-muted-foreground" />
           </div>
-          <span>mayurshelke.dev@gmail.com</span>
+          <span className="cursor-pointer">mayurshelke.dev@gmail.com</span>
         </div>
-        {/* <p className="text-muted-foreground mt-2 text-lg"></p> */}
       </div>
+      {/* social links */}
+
+      <div className="mt-4 flex items-center gap-3">
+        <SocialIcon
+          icon={<Twitter className="size-4" />}
+          onClick={() => openLink("https://twitter.com/Smayur0")}
+          iconName="X"
+        />
+
+        <SocialIcon
+          icon={<Linkedin className="size-4" />}
+          onClick={() => openLink("https://linkedin.com/in/Smayur0")}
+          iconName="LinkedIn"
+        />
+
+        <SocialIcon
+          icon={<Github className="size-4" />}
+          onClick={() => openLink("https://github.com/Smayur0")}
+          iconName="GitHub"
+        />
+      </div>
+      <Separator className="my-3" />
     </div>
   );
 };
