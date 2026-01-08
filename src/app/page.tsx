@@ -1,7 +1,7 @@
 import React from "react";
-import Hero from "./components/hero-section";
-import ExperienceSection from "./components/experience-section";
-import ProjectsSection from "./components/projects-section";
+import Hero from "./pages/hero-section";
+import ProjectsSection from "./pages/projects/projects-section";
+import ExperienceSection from "./pages/experience/experience-section";
 
 const page = () => {
   return (

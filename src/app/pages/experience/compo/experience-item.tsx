@@ -1,8 +1,10 @@
 import { MapPin } from "lucide-react";
 import React from "react";
 import { Experience } from "@/features/types/experience";
-import TechIcon from "./tech-icon";
+
 import Image from "next/image";
+import TechIcon from "@/features/utills/tech-icon";
+import { getTechIcon } from "@/lib/utils";
 
 export type ExperienceItemProps = Experience & {
   isLast?: boolean;
@@ -80,22 +82,6 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
               </p>
               <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                 {technologies.map((tech, index) => {
-                  // Map technology names to icon paths
-                  const getTechIcon = (techName: string): string => {
-                    const techMap: Record<string, string> = {
-                      React: "/REACT.png",
-                      "Next.js": "/Next.png",
-                      TypeScript: "/TS.png",
-                      "Node.js": "/Node.png",
-                      MySQL: "/MySQL.png",
-                      JavaScript: "/REACT.png", // Using React icon as fallback
-                      HTML: "/REACT.png", // Using React icon as fallback
-                      CSS: "/REACT.png", // Using React icon as fallback
-                      AWS: "/REACT.png", // Using React icon as fallback
-                    };
-                    return techMap[techName] || "/REACT.png";
-                  };
-
                   return (
                     <TechIcon key={index} img={getTechIcon(tech)} tech={tech} />
                   );

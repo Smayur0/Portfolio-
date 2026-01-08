@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import Header from "./components/header";
+import Header from "./pages/header";
 import { ThemeProvider } from "next-themes";
 
 const geistSans = Geist({
@@ -45,15 +45,17 @@ export default function RootLayout({
       <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {/* ✅ GLOBAL WRAPPER */}
-          <div className="border-border mx-auto min-h-screen max-w-3xl border-x px-4">
-            {/* HEADER */}
+          <div className="sm:border-border mx-auto min-h-screen max-w-3xl sm:border-x">
             <Header />
+            <div className="px-4 sm:px-6 md:px-8">
+              {/* HEADER */}
 
-            {/* MAIN CONTENT */}
-            <main className="pt-4">{children}</main>
+              {/* MAIN CONTENT */}
+              <main className="pt-2 sm:pt-4">{children}</main>
 
-            {/* FOOTER (optional) */}
-            {/* <Footer /> */}
+              {/* FOOTER (optional) */}
+              {/* <Footer /> */}
+            </div>
           </div>
         </ThemeProvider>
       </body>

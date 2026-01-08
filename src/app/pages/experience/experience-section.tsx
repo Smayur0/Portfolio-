@@ -1,8 +1,8 @@
 "use client";
 import { Briefcase } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import ExperienceItem from "./experience-item";
 import { experiences } from "@/features/data/experience-data";
+import ExperienceItem from "./compo/experience-item";
 
 const ExperienceSection = () => {
   return (
@@ -34,4 +34,3 @@ const ExperienceSection = () => {
 };
 
 export default ExperienceSection;
-
