@@ -3,19 +3,17 @@ import { Briefcase } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { experiences } from "@/features/data/experience-data";
 import ExperienceItem from "./compo/experience-item";
+import SectionHeader from "@/registry/section-header";
 
 const ExperienceSection = () => {
   return (
     <section id="experience" className="mt-2 sm:mt-3 md:mt-4 lg:mt-6">
       {/* Section Header */}
-      <div className="mb-4 flex items-center gap-2 sm:mb-5 sm:gap-3 md:mb-6">
-        <div className="border-muted-foreground/15 bg-muted text-foreground/75 flex size-8 items-center justify-center rounded-lg border sm:size-9 md:size-10">
-          <Briefcase className="text-muted-foreground size-4 sm:size-5" />
-        </div>
-        <h2 className="text-foreground text-lg font-bold sm:text-xl md:text-2xl lg:text-3xl">
-          Experience
-        </h2>
-      </div>
+
+      <SectionHeader
+        icon={<Briefcase className="text-muted-foreground size-4 sm:size-5" />}
+        label="Experience"
+      />
 
       {/* Experience List */}
       <div className="relative">

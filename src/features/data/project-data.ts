@@ -10,10 +10,10 @@ export const projects: Project[] = [
     deployedUrl: "https://devtinder-demo.com",
     technologies: [
       "React",
-      "Node.js",
+      "Nodejs",
       "daisyui",
       "Stripe",
-      "Socket.io",
+      "Socketio",
       "MongoDB",
       "JavaScript",
     ],
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     image: "/projects/Ecom-1.png",
     githubUrl: "https://github.com/username/ecommerce",
     deployedUrl: "https://ecommerce-demo.com",
-    technologies: ["React", "Next.js", "TypeScript", "Node.js", "MySQL", "AWS"],
+    technologies: ["React", "Nextjs", "TypeScript", "Nodejs", "MySQL", "AWS"],
     isDeployed: true,
   },
   {
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     image: "/projects/Jira-2.png",
     githubUrl: "https://github.com/username/jira-clone",
     deployedUrl: "https://jira-clone-demo.com",
-    technologies: ["React", "Next.js", "TypeScript", "Node.js", "MongoDB"],
-    isDeployed: true,
+    technologies: ["React", "Nextjs", "TypeScript", "Nodejs", "MongoDB"],
+    isDeployed: false,
   },
 ];

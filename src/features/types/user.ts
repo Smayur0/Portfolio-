@@ -8,6 +8,9 @@ export type User = {
   /** e.g. "he/him", "she/her", "they/them" */
   pronouns?: string;
   bio: string;
+  techStack: string[];
+  /** GitHub username for profile links and data fetching */
+  gitUser?: string;
   /** Short phrases rotated in UI (e.g., homepage flip effect) */
   flipSentences: string[];
   /** General location for display */

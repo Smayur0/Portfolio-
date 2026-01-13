@@ -4,6 +4,7 @@ import React from "react";
 import { Project } from "@/features/types/project";
 import TechIcon from "@/features/utills/tech-icon";
 import { getTechIcon } from "@/lib/utils";
+import SkillsIcons from "@/registry/skills-icons";
 
 const ProjectCard: React.FC<Project> = ({
   title,
@@ -64,26 +65,32 @@ const ProjectCard: React.FC<Project> = ({
           {description}
         </p>
 
-        {/* Technologies */}
-        {technologies && technologies.length > 0 && (
-          <div className="mb-4 flex flex-wrap gap-1.5 sm:mb-5 sm:gap-2">
-            {technologies.map((tech, index) => {
-              return (
-                <TechIcon key={index} img={getTechIcon(tech)} tech={tech} />
-              );
-            })}
-          </div>
-        )}
+        <div className="mb-4">
+          <p className="text-muted-foreground text-sm font-semibold">
+            Technologies
+          </p>
+          <SkillsIcons icons={technologies} />
+        </div>
 
         {/* Deployed Tag */}
-        {isDeployed && (
-          <div className="border-border mt-auto border-t pt-2">
-            <span className="inline-flex items-center rounded-md bg-green-500/10 px-2.5 py-1 text-xs font-medium text-green-600 sm:text-sm dark:text-green-400">
-              <span className="mr-1.5 size-2 rounded-full bg-green-500"></span>
-              Deployed
-            </span>
-          </div>
-        )}
+
+        <div className="border-border mt-auto border-t pt-2">
+          {isDeployed ? (
+            <>
+              <span className="inline-flex items-center rounded-md bg-green-500/10 px-2.5 py-1 text-xs font-medium text-green-600 sm:text-sm dark:text-green-400">
+                <span className="mr-1.5 size-2 rounded-full bg-green-500"></span>
+                Operational
+              </span>
+            </>
+          ) : (
+            <>
+              <span className="text-primary dark:text-primary inline-flex items-center rounded-md bg-red-500/10 px-2.5 py-1 text-xs font-medium sm:text-sm">
+                <span className="mr-1.5 size-2 rounded-full bg-red-500"></span>
+                Building
+              </span>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

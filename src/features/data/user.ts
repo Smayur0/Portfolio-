@@ -6,6 +6,7 @@ export const user: User = {
   userName: "Mayur Shelke",
   gender: "male",
   pronouns: "he/him",
+  gitUser: "Smayur0",
   bio: "Transforming ideas into interactive realities",
   flipSentences: [
     "Transforming ideas into interactive realities",
@@ -13,7 +14,17 @@ export const user: User = {
     "MERN stack developer",
   ],
   address: "Pune, India",
-  phoneNumber: "", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
+  phoneNumber: "",
+  techStack: [
+    "React",
+    "Nextjs",
+    "TypeScript",
+    "JavaScript",
+    "Nodejs",
+    "MongoDB",
+    "MySQL",
+    "AWS",
+  ],
   email: "mayurshelke.dev@gmail.com", // base64 encoded
   website: "https://mayurshelke.dev",
   jobTitle: "Frontend Developer",

@@ -83,7 +83,11 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
               <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                 {technologies.map((tech, index) => {
                   return (
-                    <TechIcon key={index} img={getTechIcon(tech)} tech={tech} />
+                    <TechIcon
+                      key={index}
+                      img={getTechIcon(tech.toLowerCase())}
+                      tech={tech}
+                    />
                   );
                 })}
               </div>
