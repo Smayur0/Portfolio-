@@ -12,6 +12,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import TechIcon from "../../features/utills/tech-icon";
 import { SocialIcon } from "../../features/utills/social-icons";
+import { getTechIcon } from "@/lib/utils";
 
 const Hero = () => {
   function linkOpener(sentense: string) {
@@ -44,13 +45,15 @@ const Hero = () => {
         <h3 className="text-muted-foreground font-small mt-2 text-xs leading-relaxed tracking-wide sm:mt-3 sm:text-sm sm:leading-loose md:mt-4 md:text-base lg:text-lg xl:text-xl">
           I build interactive web/mobile apps using
           {"  "}
-          <TechIcon img="/TS.png" tech="Typescript" /> ,{"  "}
-          <TechIcon img="/REACT.png" tech="React.js" /> ,{"  "}
-          <TechIcon img="/Node.png" tech="Node.js" /> ,{"  "}
-          <TechIcon img="/Next.png" tech="Next.js" />
+          <TechIcon img={getTechIcon("typescript")} tech={"Typescript"} />,
+          {"  "}
+          <TechIcon img={getTechIcon("react")} tech={"React.js"} /> ,{"  "}
+          <TechIcon img={getTechIcon("nodejs")} tech={"Node.js"} /> ,{"  "}
+          <TechIcon img={getTechIcon("nextjs")} tech={"Next.js"} />
           {"  "} and {"  "}
-          <TechIcon img="/MySQL.png" tech="MySQL" /> .
+          <TechIcon img={getTechIcon("mysql")} tech={"MySQL"} /> .
         </h3>
+
       </div>
 
       <Separator className="my-3 sm:my-4 md:my-5 lg:my-6" />
