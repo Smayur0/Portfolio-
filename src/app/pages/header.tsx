@@ -19,7 +19,7 @@ const Header = () => {
             className="h-9 w-9 rounded-md object-top transition-all duration-300 hover:scale-105 sm:h-10 sm:w-10 md:h-12 md:w-12 dark:hidden"
           />
           <img
-            src="/MS-w.png"
+            src="/MS-W.png"
             alt="Logo"
             className="hidden h-9 w-9 rounded-md object-top transition-all duration-300 hover:scale-105 sm:h-10 sm:w-10 md:h-12 md:w-12 dark:block"
           />
