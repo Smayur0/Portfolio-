@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="mb-3 flex items-center justify-center space-x-3 sm:mb-4 sm:justify-start sm:space-x-6 md:mb-6 md:space-x-8 lg:space-x-12">
         {/* img section */}
         <img
-          src="/IMG-4.PNg"
+          src="/IMG-4.png"
           alt="Logo"
           className="border-border h-16 w-16 rounded-full border object-cover sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28"
         />

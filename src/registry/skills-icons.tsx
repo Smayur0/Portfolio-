@@ -9,7 +9,7 @@ type Props = {
   icons: string[];
 };
 const SkillsIcons = ({ icons }: Props) => {
-  console.log("icons are", icons);
+
 
   const ImagesForIcons = icons.reduce(
     (acc: { icon: string; label: string }[], icon) => {
