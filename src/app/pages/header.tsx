@@ -3,17 +3,8 @@ import Link from "next/link";
 import { useState } from "react";
 import ModeToggle from "../providers/theme-toggle";
 import { Menu, X } from "lucide-react";
+import { OPTIONS, options } from "@/features/data/header-options";
 
-type OPTIONS = {
-  label: string;
-  value: string;
-};
-const options: OPTIONS[] = [
-  { label: "Home", value: "home" },
-  { label: "About", value: "about" },
-  { label: "Projects", value: "projects" },
-  { label: "Contact", value: "contact" },
-];
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -21,16 +12,18 @@ const Header = () => {
     <div className="border-border bg-background/40 sticky top-0 z-50 flex w-full items-center justify-between border-b px-2 py-6 backdrop-blur-sm sm:py-6 md:px-6">
       {/* image  */}
       <div className="rounded-xl">
-        <img
-          src="/MS-B.png"
-          alt="Logo"
-          className="h-9 w-9 rounded-md object-top transition-all duration-300 hover:scale-105 sm:h-10 sm:w-10 md:h-12 md:w-12 dark:hidden"
-        />
-        <img
-          src="/MS-w.png"
-          alt="Logo"
-          className="hidden h-9 w-9 rounded-md object-top transition-all duration-300 hover:scale-105 sm:h-10 sm:w-10 md:h-12 md:w-12 dark:block"
-        />
+        <Link href="#home">
+          <img
+            src="/MS-B.png"
+            alt="Logo"
+            className="h-9 w-9 rounded-md object-top transition-all duration-300 hover:scale-105 sm:h-10 sm:w-10 md:h-12 md:w-12 dark:hidden"
+          />
+          <img
+            src="/MS-w.png"
+            alt="Logo"
+            className="hidden h-9 w-9 rounded-md object-top transition-all duration-300 hover:scale-105 sm:h-10 sm:w-10 md:h-12 md:w-12 dark:block"
+          />
+        </Link>
       </div>
 
       {/* Desktop nav */}

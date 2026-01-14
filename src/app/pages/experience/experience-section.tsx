@@ -7,7 +7,10 @@ import SectionHeader from "@/registry/section-header";
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="mt-2 sm:mt-3 md:mt-4 lg:mt-6">
+    <section
+      id="experience"
+      className="mt-2 scroll-mt-24 sm:mt-3 sm:scroll-mt-28 md:mt-4 lg:mt-6"
+    >
       {/* Section Header */}
 
       <SectionHeader

@@ -21,7 +21,7 @@ const Hero = () => {
   const openLink = (url: string) => window.open(url, "_blank");
 
   return (
-    <div className="mt-2 sm:mt-3 md:mt-4 lg:mt-6">
+    <div className="mt-2 scroll-mt-24 sm:mt-3 sm:scroll-mt-28 md:mt-4 lg:mt-6">
       <div className="mb-3 flex items-center justify-center space-x-3 sm:mb-4 sm:justify-start sm:space-x-6 md:mb-6 md:space-x-8 lg:space-x-12">
         {/* img section */}
         <img
@@ -34,7 +34,7 @@ const Hero = () => {
       {/* Intro  */}
       <div className="mt-3 sm:mt-4 md:mt-5 lg:mt-6">
         <h1 className="text-foreground text-lg leading-tight font-bold tracking-wide sm:text-xl sm:leading-normal md:text-2xl md:leading-loose lg:text-3xl xl:text-4xl">
-          Hi , I'm {user.firstName} —-{" "}
+          Hi , I'm {user.firstName} —{" "}
           <span className="text-muted-foreground block sm:ml-1 sm:inline">
             A Full Stack web developer.
           </span>
