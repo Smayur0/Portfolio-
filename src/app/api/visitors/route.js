@@ -6,7 +6,7 @@
 //   return NextResponse.json({ count });
 // }
 
-import redis from "@/lib/redis";
+import redis from "../../../features/utills/redis";
 import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
