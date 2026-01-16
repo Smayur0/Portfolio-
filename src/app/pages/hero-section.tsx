@@ -12,7 +12,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import TechIcon from "../../features/utills/tech-icon";
 import { SocialIcon } from "../../features/utills/social-icons";
-import { getTechIcon } from "@/lib/utils";
+import { getTechIcon } from "@/features/utills/utils";
 
 const Hero = () => {
   function linkOpener(sentense: string) {
@@ -53,7 +53,6 @@ const Hero = () => {
           {"  "} and {"  "}
           <TechIcon img={getTechIcon("mysql")} tech={"MySQL"} /> .
         </h3>
-
       </div>
 
       <Separator className="my-3 sm:my-4 md:my-5 lg:my-6" />

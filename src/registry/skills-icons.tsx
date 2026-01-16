@@ -3,14 +3,12 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { getTechIcon } from "@/lib/utils";
+import { getTechIcon } from "@/features/utills/utils";
 
 type Props = {
   icons: string[];
 };
 const SkillsIcons = ({ icons }: Props) => {
-
-
   const ImagesForIcons = icons.reduce(
     (acc: { icon: string; label: string }[], icon) => {
       const imgSrc = getTechIcon(icon.toLowerCase());

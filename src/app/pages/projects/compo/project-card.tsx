@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { Project } from "@/features/types/project";
 import TechIcon from "@/features/utills/tech-icon";
-import { getTechIcon } from "@/lib/utils";
+import { getTechIcon } from "@/features/utills/utils";
 import SkillsIcons from "@/registry/skills-icons";
 
 const ProjectCard: React.FC<Project> = ({

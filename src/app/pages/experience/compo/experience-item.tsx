@@ -4,7 +4,7 @@ import { Experience } from "@/features/types/experience";
 
 import Image from "next/image";
 import TechIcon from "@/features/utills/tech-icon";
-import { getTechIcon } from "@/lib/utils";
+import { getTechIcon } from "@/features/utills/utils";
 
 export type ExperienceItemProps = Experience & {
   isLast?: boolean;
