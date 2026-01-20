@@ -13,6 +13,7 @@ import { Separator } from "@/components/ui/separator";
 import TechIcon from "../../features/utills/tech-icon";
 import { SocialIcon } from "../../features/utills/social-icons";
 import { getTechIcon } from "@/features/utills/utils";
+import { experiences } from "@/features/data/experience-data";
 
 const Hero = () => {
   function linkOpener(sentense: string) {
@@ -65,8 +66,8 @@ const Hero = () => {
             <CodeXmlIcon className="text-muted-foreground size-3 sm:size-4 md:size-5" />
           </div>
           <span className="cursor-pointer text-xs sm:text-sm md:text-base">
-            Software Developer at{" "}
-            <span className="font-semibold">iConnect solutions</span>
+            {experiences[0].title} at{" "}
+            <span className="font-semibold">{experiences[0].company}</span>
           </span>
         </div>
         {/* -------Location------- */}
@@ -78,31 +79,31 @@ const Hero = () => {
             <MapPin className="text-muted-foreground size-3 sm:size-4 md:size-5" />
           </div>
           <span className="cursor-pointer text-xs sm:text-sm md:text-base">
-            Pune, India
+            {user.address}
           </span>
         </div>
         {/* -------Portfolio site------- */}
         <div className="flex items-center space-x-2 sm:space-x-3">
           <div
-            onClick={() => linkOpener("https://mayurshelke.dev")}
+            onClick={() => linkOpener(user.website!)}
             className="border-muted-foreground/15 bg-muted text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-6 cursor-pointer items-center justify-center rounded-lg border p-1 transition-colors sm:size-7 md:size-8"
           >
             <Globe className="text-muted-foreground size-3 sm:size-4 md:size-5" />
           </div>
           <span className="cursor-pointer text-xs break-all sm:text-sm md:text-base">
-            mayurshelke.dev
+            {user.website}
           </span>
         </div>
         {/* -------mail------- */}
         <div className="flex items-center space-x-2 sm:space-x-3">
           <div
-            onClick={() => linkOpener("mailto:mayurshelke.dev@gmail.com")}
+            onClick={() => linkOpener(`mailto:${user.email}`)}
             className="border-muted-foreground/15 bg-muted text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-6 cursor-pointer items-center justify-center rounded-lg border p-1 transition-colors sm:size-7 md:size-8"
           >
             <Mail className="text-muted-foreground size-3 sm:size-4 md:size-5" />
           </div>
           <span className="cursor-pointer text-xs break-all sm:text-sm md:text-base">
-            mayurshelke.dev@gmail.com
+            {user.email}
           </span>
         </div>
       </div>
@@ -110,19 +111,19 @@ const Hero = () => {
       <div className="mt-3 flex items-center gap-2 sm:mt-4 sm:gap-3 md:mt-6">
         <SocialIcon
           icon={<Twitter className="size-4" />}
-          onClick={() => openLink("https://twitter.com/Smayur0")}
+          onClick={() => openLink(user.socials.twitter)}
           iconName="X"
         />
 
         <SocialIcon
           icon={<Linkedin className="size-4" />}
-          onClick={() => openLink("https://linkedin.com/in/Smayur0")}
+          onClick={() => openLink(user.socials.linkedin)}
           iconName="LinkedIn"
         />
 
         <SocialIcon
           icon={<Github className="size-4" />}
-          onClick={() => openLink("https://github.com/Smayur0")}
+          onClick={() => openLink(user.socials.github)}
           iconName="GitHub"
         />
       </div>

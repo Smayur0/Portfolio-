@@ -1,7 +1,7 @@
 
 "use client";
 import React, { useEffect } from "react";
-import { MoonIcon, SunIcon } from "../../registry/icons";
+import { MoonIcon, SunIcon } from "../../features/data/icons";
 import { useTheme } from "next-themes";
 
 const ModeToggle = () => {
