@@ -22,6 +22,11 @@ export type User = {
   /** Personal/homepage URL */
   website?: string;
   /** Primary/current role shown on profile */
+  socials: {
+    github: string;
+    linkedin: string;
+    twitter: string;
+  };
   jobTitle?: string;
   /** Work history entries */
   jobs: {
@@ -30,10 +35,6 @@ export type User = {
   }[];
   /** Rich about section; supports Markdown */
   about: string;
-  /** Public URL to avatar image */
-  avatar: string;
-  /** Open Graph image URL for social sharing */
-  ogImage: string;
   /** Audio URL for name pronunciation */
   namePronunciationUrl: string;
   /** SEO keywords list for metadata */

@@ -26,7 +26,12 @@ export const user: User = {
     "AWS",
   ],
   email: "mayurshelke.dev@gmail.com", // base64 encoded
-  website: "https://mayurshelke.dev",
+  website: "https://mayurshelke.vercel.app",
+  socials: {
+    github: "https://github.com/Smayur0",
+    linkedin: "https://linkedin.com/in/Smayur0",
+    twitter: "https://x.com/Smayur0",
+  },
   jobTitle: "Frontend Developer",
   jobs: [
     {
@@ -44,9 +49,7 @@ export const user: User = {
 - I’ve worked across both frontend (React) and backend (Node.js, Express), built and integrated REST APIs, and have hands-on experience with MongoDB and MySQL.
 - I've also worked with AWS services for deploying and managing applications.
 - I enjoy building clean, scalable solutions and continuously learning new technologies.`,
-  avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
-  ogImage:
-    "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1764345394",
+
   namePronunciationUrl: "",
   keywords: [],
   timeZone: "",
