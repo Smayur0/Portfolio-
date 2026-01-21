@@ -17,7 +17,7 @@ import { experiences } from "@/features/data/experience-data";
 
 const Hero = () => {
   function linkOpener(sentense: string) {
-    window.open(sentense, "_blank", "noopener,noreferrer");
+    window.open(sentense, "_blank");
   }
 
   const openLink = (url: string) => window.open(url, "_blank");
@@ -71,11 +71,11 @@ const Hero = () => {
           </span>
         </div>
         {/* -------Location------- */}
-        <div className="flex items-center space-x-2 sm:space-x-3">
-          <div
-            onClick={() => linkOpener("https://maps.google.com/?q=Pune, India")}
-            className="border-muted-foreground/15 bg-muted text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-6 cursor-pointer items-center justify-center rounded-lg border p-1 transition-colors sm:size-7 md:size-8"
-          >
+        <div
+          className="flex items-center space-x-2 sm:space-x-3"
+          onClick={() => linkOpener("https://maps.google.com/?q=Pune, India")}
+        >
+          <div className="border-muted-foreground/15 bg-muted text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-6 cursor-pointer items-center justify-center rounded-lg border p-1 transition-colors sm:size-7 md:size-8">
             <MapPin className="text-muted-foreground size-3 sm:size-4 md:size-5" />
           </div>
           <span className="cursor-pointer text-xs sm:text-sm md:text-base">
@@ -83,11 +83,11 @@ const Hero = () => {
           </span>
         </div>
         {/* -------Portfolio site------- */}
-        <div className="flex items-center space-x-2 sm:space-x-3">
-          <div
-            onClick={() => linkOpener(user.website!)}
-            className="border-muted-foreground/15 bg-muted text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-6 cursor-pointer items-center justify-center rounded-lg border p-1 transition-colors sm:size-7 md:size-8"
-          >
+        <div
+          className="flex items-center space-x-2 sm:space-x-3"
+          onClick={() => linkOpener(user.website!)}
+        >
+          <div className="border-muted-foreground/15 bg-muted text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-6 cursor-pointer items-center justify-center rounded-lg border p-1 transition-colors sm:size-7 md:size-8">
             <Globe className="text-muted-foreground size-3 sm:size-4 md:size-5" />
           </div>
           <span className="cursor-pointer text-xs break-all sm:text-sm md:text-base">
@@ -95,11 +95,11 @@ const Hero = () => {
           </span>
         </div>
         {/* -------mail------- */}
-        <div className="flex items-center space-x-2 sm:space-x-3">
-          <div
-            onClick={() => linkOpener(`mailto:${user.email}`)}
-            className="border-muted-foreground/15 bg-muted text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-6 cursor-pointer items-center justify-center rounded-lg border p-1 transition-colors sm:size-7 md:size-8"
-          >
+        <div
+          className="flex items-center space-x-2 sm:space-x-3"
+          onClick={() => linkOpener(`mailto:${user.email}`)}
+        >
+          <div className="border-muted-foreground/15 bg-muted text-foreground/75 hover:bg-muted/50 hover:text-foreground/90 flex size-6 cursor-pointer items-center justify-center rounded-lg border p-1 transition-colors sm:size-7 md:size-8">
             <Mail className="text-muted-foreground size-3 sm:size-4 md:size-5" />
           </div>
           <span className="cursor-pointer text-xs break-all sm:text-sm md:text-base">

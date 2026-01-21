@@ -13,8 +13,7 @@ const Footer = () => {
             <span className="cursor-pointer font-semibold">Mayur Shelke</span>
           </p>
           <p className="text-center text-sm text-gray-500">
-            &copy; {new Date().getFullYear()}
-            All rights reserved.
+            &copy; {new Date().getFullYear()} All rights reserved.
           </p>
         </>
       </div>
