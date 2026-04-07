@@ -2,6 +2,32 @@ import { Experience } from "../types/experience";
 
 export const experiences: Experience[] = [
   {
+    title: "Open Source Contributor",
+    company: "Team Shiksha",
+    companyImage: "/team-shiksha-logo.webp",
+    location: "Remote",
+    startDate: "Dec-25",
+    current: true,
+    description: [
+      "Contributed to the OpenLogo project, migrating authentication from JWT to session-based auth improving security and simplifying token management across the application",
+      "Configured GitHub Actions workflows for automated testing and deployment, and integrated Husky with pre-commit hooks to enforce linting and code quality standards",
+      "Led UI revamp efforts, redesigning key pages and components to improve usability, accessibility, and overall user experience",
+      "Collaborated with contributors in a pnpm workspace monorepo, managing shared packages and ensuring consistent dependency resolution across services",
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "JavaScript",
+      "pnpm Workspace",
+      "GitHub Actions",
+      "Husky",
+      "Vercel",
+      "AWS",
+    ],
+  },
+  {
     title: "Software Developer",
     company: "iConnect solutions",
     companyImage: "/iConnect-2.webp",

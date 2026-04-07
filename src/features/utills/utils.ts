@@ -11,18 +11,23 @@ export const getTechIcon = (techName: string): string => {
     nextjs: "/tech/Next.png",
     typescript: "/tech/TS.png",
     nodejs: "/tech/Node.png",
+    "node.js": "/tech/Node.png",
     mysql: "/tech/MySQL.png",
     javascript: "/tech/JavaScript.png",
     aws: "/tech/AWS.png",
     daisyui: "/tech/daisyui.png",
-    tailwindcss: "/tech/TailwindCSS.png",
+    tailwindcss: "/tech/tailwind.png",
     socketio: "/tech/Socket.png",
     stripe: "/tech/Stripe.png",
-    vercel: "/tech/vercel.png",
+    vercel: "/tech/Vercel.png",
     mongodb: "/tech/MongoDB.png",
     html: "/tech/html.png",
     css: "/tech/css.png",
+    "github actions": "/tech/github-actions.png",
+    husky: "/tech/husky.png",
+    "pnpm workspace": "/tech/pnpm.png",
+    pnpm: "/tech/pnpm.png",
   };
 
-  return techMap[techName] || "/tech/vercel.png";
+  return techMap[techName] || "/tech/Vercel.png";
 };

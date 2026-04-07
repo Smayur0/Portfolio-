@@ -14,5 +14,3 @@ export type Project = {
   /** Whether the project is deployed */
   isDeployed: boolean;
 };
-
-

@@ -1,12 +1,12 @@
-import VisitorCounter from "./compo/visitors-count";
+// import VisitorCounter from "./compo/visitors-count";
 
 const Footer = () => {
   return (
     <div className="h-60">
       <div className="flex h-full flex-col justify-end space-y-2 pb-4">
-        <div className="mb-10 w-full text-center">
+        {/* <div className="mb-10 w-full text-center">
           <VisitorCounter />
-        </div>
+        </div> */}
         <>
           <p className="text-center text-sm text-gray-500">
             Design & Developed by{" "}

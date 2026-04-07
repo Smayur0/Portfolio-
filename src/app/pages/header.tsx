@@ -10,21 +10,12 @@ const Header = () => {
 
   return (
     <div className="border-border bg-background/40 sticky top-0 z-50 flex w-full items-center justify-between border-b px-2 py-6 backdrop-blur-sm sm:py-6 md:px-6">
-      {/* image  */}
-      <div className="rounded-xl">
-        <Link href="#home">
-          <img
-            src="/MS-B.png"
-            alt="Logo"
-            className="h-9 w-9 rounded-md object-top transition-all duration-300 hover:scale-105 sm:h-10 sm:w-10 md:h-12 md:w-12 dark:hidden"
-          />
-          <img
-            src="/MS-W.png"
-            alt="Logo"
-            className="hidden h-9 w-9 rounded-md object-top transition-all duration-300 hover:scale-105 sm:h-10 sm:w-10 md:h-12 md:w-12 dark:block"
-          />
-        </Link>
-      </div>
+      <Link
+        href="#home"
+        className="text-foreground text-lg font-bold tracking-tight transition-opacity duration-300 hover:opacity-80 sm:text-xl md:text-2xl"
+      >
+        Mayur Shelke
+      </Link>
 
       {/* Desktop nav */}
       <div className="hidden md:flex md:items-center md:gap-4">
