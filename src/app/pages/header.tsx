@@ -9,34 +9,36 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="border-border bg-background/40 sticky top-0 z-50 flex w-full items-center justify-between border-b px-2 py-6 backdrop-blur-sm sm:py-6 md:px-6">
+    <div className="border-border bg-background/80 sticky top-0 z-50 flex w-full items-center justify-between border-b px-4 py-4 backdrop-blur-md sm:py-5 md:px-6">
       <Link
         href="#home"
-        className="text-foreground text-lg font-bold tracking-tight transition-opacity duration-300 hover:opacity-80 sm:text-xl md:text-2xl"
+        className="text-foreground text-base font-bold tracking-tight transition-opacity duration-200 hover:opacity-75 sm:text-lg"
       >
-        Mayur Shelke
+        <span className="text-primary">M</span>ayur Shelke
       </Link>
 
       {/* Desktop nav */}
-      <div className="hidden md:flex md:items-center md:gap-4">
+      <div className="hidden md:flex md:items-center md:gap-1">
         {options.map((option: OPTIONS) => (
           <Link
             key={option.value}
             href={`/#${option.value}`}
-            className="text-foreground hover:text-foreground text-sm font-medium transition-colors md:text-base"
+            className="text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg px-3 py-1.5 text-sm font-medium transition-colors"
           >
             {option.label}
           </Link>
         ))}
-        <ModeToggle />
+        <div className="ml-2">
+          <ModeToggle />
+        </div>
       </div>
 
-      {/* Mobile menu button and theme toggle */}
+      {/* Mobile: theme toggle + hamburger */}
       <div className="flex items-center gap-2 md:hidden">
         <ModeToggle />
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="border-border hover:bg-muted flex size-8 items-center justify-center rounded-md border transition-colors"
+          className="border-border hover:bg-muted flex size-8 items-center justify-center rounded-lg border transition-colors"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X className="size-4" /> : <Menu className="size-4" />}
@@ -45,14 +47,14 @@ const Header = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="bg-background border-border absolute top-full right-0 left-0 border-b md:hidden">
-          <div className="flex flex-col gap-2 px-4 py-3 sm:gap-3 sm:py-4">
+        <div className="bg-background border-border absolute top-full right-0 left-0 border-b shadow-md md:hidden">
+          <div className="flex flex-col px-4 py-2">
             {options.map((option) => (
               <Link
                 key={option.value}
                 href={`/#${option.value}`}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-foreground hover:text-foreground py-2 text-sm font-medium transition-colors sm:text-base"
+                className="text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg px-2 py-2.5 text-sm font-medium transition-colors"
               >
                 {option.label}
               </Link>

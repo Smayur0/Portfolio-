@@ -14,7 +14,7 @@ const BlogsSection = () => {
       className="mt-2 scroll-mt-24 sm:mt-3 sm:scroll-mt-28 md:mt-4 lg:mt-6"
     >
       <SectionHeader
-        icon={<PenLine className="text-muted-foreground size-4 sm:size-5" />}
+        icon={<PenLine className="size-4 sm:size-5" />}
         label="Blogs"
       />
 

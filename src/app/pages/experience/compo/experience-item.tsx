@@ -24,24 +24,24 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 }) => {
   return (
     <div className="group relative">
-      {/* Timeline connector line - hidden on mobile, visible on larger screens, hidden on last item */}
+      {/* Timeline connector line */}
       {!isLast && (
-        <div className="border-border absolute top-8 bottom-0 left-3 hidden border-l-2 sm:block md:left-4" />
+        <div className="border-primary/30 absolute top-8 bottom-0 left-3 hidden border-l-2 sm:block md:left-4" />
       )}
 
       <div className="flex gap-3 sm:gap-4">
         {/* Timeline dot */}
-        <div className="border-border bg-background relative z-10 flex size-6 shrink-0 items-center justify-center rounded-full border-2 sm:size-7 md:size-8">
+        <div className="border-primary/40 bg-primary/5 relative z-10 flex size-6 shrink-0 items-center justify-center rounded-full border-2 sm:size-7 md:size-8">
           <div className="bg-primary size-2 rounded-full sm:size-2.5 md:size-3" />
         </div>
 
-        {/* Content */}
-        <div className="flex-1 pb-6 sm:pb-8 md:pb-10">
+        {/* Content card */}
+        <div className="border-border/60 bg-muted/20 hover:bg-muted/30 mb-4 flex-1 rounded-xl border p-4 transition-colors sm:mb-5 sm:p-5 md:mb-6">
           {/* Header with company image, name, and date */}
-          <div className="mb-2 flex items-start justify-between gap-3">
+          <div className="mb-3 flex items-start justify-between gap-3">
             <div className="flex items-center gap-2 sm:gap-3">
               {companyImage && (
-                <div className="border-border flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-lg border sm:size-12 md:size-14">
+                <div className="border-border flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-lg border bg-white sm:size-12 md:size-14">
                   <Image
                     src={companyImage}
                     alt={company}
@@ -52,18 +52,18 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
                 </div>
               )}
               <div className="flex flex-col">
-                <h3 className="text-foreground text-sm font-semibold sm:text-base md:text-lg lg:text-xl">
+                <h3 className="text-foreground text-sm font-semibold sm:text-base md:text-lg">
                   {company}
                 </h3>
-                <p className="text-muted-foreground mt-0.5 text-xs font-medium sm:text-sm md:text-base">
+                <p className="text-primary mt-0.5 text-xs font-medium sm:text-sm">
                   {title}
                 </p>
               </div>
             </div>
-            <div className="text-muted-foreground flex shrink-0 flex-col items-end text-right text-xs sm:text-sm md:text-base">
+            <div className="text-muted-foreground flex shrink-0 flex-col items-end text-right text-xs sm:text-sm">
               <span>
                 {startDate}{" "}
-                {endDate ? `to ${endDate}` : current ? "to Present" : ""}
+                {endDate ? `– ${endDate}` : current ? "– Present" : ""}
               </span>
               {location && (
                 <div className="mt-1 flex items-center gap-1">
@@ -74,11 +74,11 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
             </div>
           </div>
 
-          {/* Tools and technologies used - below header container */}
+          {/* Tools and technologies */}
           {technologies && technologies.length > 0 && (
-            <div className="mt-2 mb-2 sm:mt-3">
-              <p className="text-foreground mb-1.5 text-xs font-semibold sm:text-sm md:text-base">
-                Tools and technologies used:
+            <div className="mb-3">
+              <p className="text-muted-foreground mb-1.5 text-xs font-semibold uppercase tracking-wide sm:text-xs">
+                Stack
               </p>
               <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                 {technologies.map((tech, index) => {
@@ -96,7 +96,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 
           {/* Description */}
           {description && description.length > 0 && (
-            <ul className="text-muted-foreground mt-2 space-y-1.5 text-xs sm:mt-3 sm:space-y-2 sm:text-sm md:space-y-2.5 md:text-base">
+            <ul className="text-muted-foreground space-y-1.5 text-xs sm:space-y-2 sm:text-sm">
               {description.map((item, index) => (
                 <li key={index} className="flex gap-2.5">
                   <span className="text-primary mt-0.5 shrink-0">•</span>

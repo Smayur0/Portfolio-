@@ -14,7 +14,7 @@ const ExperienceSection = () => {
       {/* Section Header */}
 
       <SectionHeader
-        icon={<Briefcase className="text-muted-foreground size-4 sm:size-5" />}
+        icon={<Briefcase className="size-4 sm:size-5" />}
         label="Experience"
       />
 

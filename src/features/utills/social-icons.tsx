@@ -21,7 +21,7 @@ export const SocialIcon: React.FC<SocialIconProps> = ({
       <TooltipTrigger asChild>
         <button
           onClick={onClick}
-          className="border-muted-foreground/20 bg-muted/40 text-muted-foreground hover:bg-background hover:text-foreground hover:ring-offset-background flex size-8 items-center justify-center rounded-lg border transition-all hover:scale-105 hover:ring-1 hover:ring-blue-300 hover:ring-offset-2"
+          className="border-muted-foreground/20 bg-muted/40 text-muted-foreground hover:bg-background hover:text-foreground hover:ring-offset-background flex size-8 items-center justify-center rounded-lg border transition-all hover:scale-105 hover:ring-1 hover:ring-red-300 hover:ring-offset-2"
         >
           {icon}
         </button>

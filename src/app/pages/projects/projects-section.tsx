@@ -14,7 +14,7 @@ const ProjectsSection = () => {
     >
       {/* Section Header */}
       <SectionHeader
-        icon={<Code2 className="text-muted-foreground size-4 sm:size-5" />}
+        icon={<Code2 className="size-4 sm:size-5" />}
         label="Projects"
       />
 

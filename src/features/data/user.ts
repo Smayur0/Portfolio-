@@ -7,11 +7,11 @@ export const user: User = {
   gender: "male",
   pronouns: "he/him",
   gitUser: "Smayur0",
-  bio: "Transforming ideas into interactive realities",
+  bio: "Building scalable web applications with 3+ years of hands-on experience",
   flipSentences: [
-    "Transforming ideas into interactive realities",
-    "Frontend Developer",
-    "MERN stack developer",
+    "Full Stack Developer",
+    "Open Source Contributor",
+    "Building for the web",
   ],
   address: "Pune, India",
   phoneNumber: "",
@@ -46,12 +46,7 @@ export const user: User = {
       company: "iConnect",
     },
   ],
-  about: `
-- **Full Stack Web Developer** with **2+ years of experience**.
-- Skilled in **Next.js**, **React**, **TypeScript**, and modern front-end technologies; building high-quality, user-centric web and mobile applications.
-- I’ve worked across both frontend (React) and backend (Node.js, Express), built and integrated REST APIs, and have hands-on experience with MongoDB and MySQL.
-- I've also worked with AWS services for deploying and managing applications.
-- I enjoy building clean, scalable solutions and continuously learning new technologies.`,
+  about: `Full Stack Developer with 3+ years of professional experience building and shipping web applications. I specialize in React, Next.js, TypeScript, and Node.js — from crafting pixel-perfect interfaces to designing robust backend systems with REST APIs, MongoDB, and MySQL. I’ve contributed to open-source projects, led UI revamps, and deployed production applications on AWS and Vercel. I care deeply about clean code, performance, and building products that solve real problems.`,
 
   namePronunciationUrl: "",
   keywords: [],
