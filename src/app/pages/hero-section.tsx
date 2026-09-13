@@ -13,7 +13,6 @@ import { Separator } from "@/components/ui/separator";
 import { SocialIcon } from "../../features/utills/social-icons";
 import { experiences } from "@/features/data/experience-data";
 import { FlipSentences } from "@/registry/flip-sentenses/flip-sentences";
-import { CodingStatusDot } from "@/registry/coding-status/coding-status";
 import { motion } from "motion/react";
 
 const fadeUp = {
@@ -35,15 +34,12 @@ const Hero = () => {
         {...fadeUp}
         transition={{ duration: 0.5 }}
       >
-        <div className="relative">
-          <div className="from-primary via-primary/60 to-primary/20 rounded-full bg-gradient-to-br p-[2.5px]">
-            <img
-              src="/IMG-4.png"
-              alt={user.userName}
-              className="bg-background h-20 w-20 rounded-full object-cover sm:h-24 sm:w-24 md:h-28 md:w-28"
-            />
-          </div>
-          <CodingStatusDot />
+        <div className="from-primary via-primary/60 to-primary/20 rounded-full bg-gradient-to-br p-[2.5px]">
+          <img
+            src="/IMG-4.png"
+            alt={user.userName}
+            className="bg-background h-20 w-20 rounded-full object-cover sm:h-24 sm:w-24 md:h-28 md:w-28"
+          />
         </div>
 
         <div className="flex flex-col gap-2">

@@ -7,7 +7,7 @@ export const experiences: Experience[] = [
     companyImage: "/team-shiksha-logo.webp",
     location: "Remote",
     startDate: "Dec-25",
-    current: true,
+    endDate: "May-26",
     description: [
       "Contributed to the OpenLogo project, migrating authentication from JWT to session-based auth improving security and simplifying token management across the application",
       "Configured GitHub Actions workflows for automated testing and deployment, and integrated Husky with pre-commit hooks to enforce linting and code quality standards",

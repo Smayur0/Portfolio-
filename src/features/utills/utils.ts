@@ -31,3 +31,4 @@ export const getTechIcon = (techName: string): string => {
 
   return techMap[techName] || "/tech/Vercel.png";
 };
+

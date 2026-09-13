@@ -2,6 +2,23 @@ import { Project } from "../types/project";
 
 export const projects: Project[] = [
   {
+    title: "Personal Tracker",
+    description:
+      "A simple PWA built as a personal space to keep everyday life organised in one place. Built with Next.js, it brings together money tracking, EMI tracking, event tracking and scheduling, along with several other utilities — installable on any device and designed for quick, distraction-free daily use.",
+    image: "/projects/PersonalTracker.svg",
+    githubUrl: "https://github.com/Smayur0/personal-tracker",
+    deployedUrl: "https://personal-tracker-eight-virid.vercel.app/",
+    technologies: [
+      "Nextjs",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "MongoDB",
+      "JavaScript",
+    ],
+    isDeployed: true,
+  },
+  {
     title: "DevTinder",
     description:
       "A social networking platform designed specifically for developers to connect, collaborate, and share their coding journey. Features include profile matching, project showcases, and real-time messaging to help developers find their perfect coding partner or mentor.",
@@ -17,7 +34,7 @@ export const projects: Project[] = [
       "MongoDB",
       "JavaScript",
     ],
-    isDeployed: true,
+    isDeployed: false,
   },
   {
     title: "E-Commerce (Mobile App)",
